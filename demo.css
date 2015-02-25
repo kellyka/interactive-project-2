@@ -10,7 +10,7 @@ html {
 body {
   _width: 70%;
   color: #888;
-  font: 14px/20px Helvetica, Arial, sans-serif;
+  font: 1.5vw Helvetica, Arial, sans-serif;
   margin: 20px auto 0;
   max-width: 800px;
   text-align: center;
@@ -34,13 +34,14 @@ h2 {
   }
 
 p,h3,h4,pre {
-  
+  font-size: 1vw;
+  line-height: 2vw;
  
  
   }
 
 h5{
-  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.5vw "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 10px;
   text-align: left;
   
@@ -145,32 +146,30 @@ h3 {
 
 .caption{
   position: absolute;
-  top: 20px;
-  left: 550px;
-  width: 180px;
-  height: 300px;
+  top: 5%;
+  left: 72%;
+  width: 25%;
+  height: 90%;
+  font-size: 14px;
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  padding: 2%;
+}
+
+.sources{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   text-shadow: none;
   color: #fff;
   background: #000;
   background: rgba(0,0,0, .8);
   padding: 20px;
-}
-
-@media (max-width:400px){
-  .caption{
-    position: absolute;
-    top: 100px;
-    left: 10px;
-    width: 250px;
-    height: 40px;
-    font-size: 10px;
-    text-shadow: none;
-    color: #fff;
-    background: #000;
-    background: rgba(0,0,0, .8);
-    padding: 20px;
-  }
 }
 
 .callbacks_container {
@@ -196,16 +195,16 @@ h3 {
   top: 0;
   }
 
-.callbacks img {
+/*.callbacks img {
   display: block;
   position: relative;
   z-index: 1;
   height: auto;
   width: 100%;
   border: 0;
-  }
+  }*/
 
-.callbacks .caption {
+/*.callbacks .caption {
   display: block;
   position: absolute;
   z-index: 2;
@@ -214,13 +213,13 @@ h3 {
   color: #fff;
   background: #000;
   background: rgba(0,0,0, .8);
-  left:10px;
+  left:75%;
   right: 0;
   bottom: 0;
   padding: 10px 20px;
   margin: 0;
   max-width: none;
-  }
+  }*/
 
 .callbacks_nav {
   position: absolute;
@@ -236,6 +235,7 @@ h3 {
   width: 38px;
   background: transparent url("themes/themes.gif") no-repeat left top;
   margin-top: -45px;
+ 
   }
 
 .callbacks_nav:active {
@@ -274,17 +274,29 @@ h3 {
     }
   }
   
+  
+ .button{
+  background-image: url('images/button-test.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  top:19%;
+  left: 18%;
+ }
+ 
+ /* For the map of Italy */
 .circle-milan {
   border-radius: 50%;
-  border: solid 3px red;
+  border: solid red;
+  border-width: medium;
   background-color: white;
   color:white;
   font-size: 16px;
-  width: 10px;
-  height: 10px;
+  width: 1%;
+  height: 2%;
   position: absolute;
-  top:76px;
-  left: 132px;
+  top:19%;
+  left: 18%;
 }
 
 .circle-venice {
@@ -296,8 +308,8 @@ h3 {
   width: 10px;
   height: 10px;
   position: absolute;
-  top:80px;
-  left: 205px;
+  top:20%;
+  left: 27%;
 }
 
 
@@ -310,8 +322,8 @@ h3 {
   width: 10px;
   height: 10px;
   position: absolute;
-  top:130px;
-  left:157px;
+  top:35%;
+  left:21%;
 }
 
   
@@ -324,8 +336,8 @@ h3 {
   width: 10px;
   height: 10px;
   position: absolute;
-  top:130px;
-  left: 180px;
+  top:34%;
+  left: 24%;
 }
 
 .circle-rome {
@@ -337,8 +349,8 @@ h3 {
   width: 10px;
   height: 10px;
   position: absolute;
-  top:192px;
-  left: 208px;
+  top:50%;
+  left: 28%;
 }
 
 .circle-naples {
@@ -350,8 +362,8 @@ h3 {
   width: 10px;
   height: 10px;
   position: absolute;
-  top:220px;
-  left: 250px;
+  top:57%;
+  left: 33%;
 }
 
 .circle-sicily {
@@ -363,9 +375,11 @@ h3 {
   width: 10px;
   height: 10px;
   position: absolute;
-  top:332px;
-  left: 254px;
+  top:87%;
+  left: 33.5%;
 }
+
+/* Map of Pisa */
 
 .circle-leaning {
   border-radius: 50%;
@@ -373,11 +387,11 @@ h3 {
   background-color: red;
   color:white;
   font-size: 16px;
-  width: 10px;
-  height: 10px;
+  width: 1%;
+  height: 2%;
   position: absolute;
-  top:233px;
-  left: 388px;
+  top:63%;
+  left: 53%;
 }
 
 .circle-baptistry {
@@ -386,12 +400,80 @@ h3 {
   background-color: red;
   color:white;
   font-size: 16px;
-  width: 10px;
-  height: 10px;
+  width: 1%;
+  height: 2%;
   position: absolute;
-  top:190px;
-  left: 170px;
+  top:49.5%;
+  left: 22.5%;
 }
+
+.circle-cattedrale {
+  border-radius: 50%;
+  border: solid 3px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  top:50.5%;
+  left: 44.5%;
+}
+
+
+.circle-piazza {
+  border-radius: 50%;
+  border: solid 3px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  top:65%;
+  left: 35%;
+}
+
+.circle-museo {
+  border-radius: 50%;
+  border: solid 3px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  top:71%;
+  left: 29%;
+}
+
+.circle-camposanto {
+  border-radius: 50%;
+  border: solid 3px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  top:31%;
+  left: 29%;
+}
+
+.circle-fountain{
+  border-radius: 50%;
+  border: solid 3px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  position: absolute;
+  top:75%;
+  left: 51%;
+}
+
+/*Timeline interactives*/
 
 .circle-timeline-one {
   border-radius: 50%;
@@ -399,11 +481,11 @@ h3 {
   background-color: red;
   color:white;
   font-size: 16px;
-  width: 15px;
-  height: 15px;
+  width: 2%;
+  height: 4%;
   position: absolute;
-  top:220px;
-  left: 50px;
+  top:55%;
+  left:6%;
 }
 
 .circle-timeline-two {
@@ -412,11 +494,11 @@ h3 {
   background-color: red;
   color:white;
   font-size: 16px;
-  width: 15px;
-  height: 15px;
+  width: 2%;
+  height: 4%;
   position: absolute;
-  top:220px;
-  left: 190px;
+  top:55%;
+  left: 25%;
 }
 
 .circle-timeline-three {
@@ -425,25 +507,79 @@ h3 {
   background-color: red;
   color:white;
   font-size: 16px;
-  width: 15px;
-  height: 15px;
+  width: 2%;
+  height: 4%;
   position: absolute;
-  top:220px;
-  left: 320px;
+  top:55%;
+  left: 42%;
 }
 
-.circle {
+.circle-degree-first{
   border-radius: 50%;
-  border: solid 3px red;
+  border: solid 2px red;
   background-color: red;
   color:white;
   font-size: 16px;
-  width: 15px;
-  height: 15px;
+  width: 2%;
+  height: 4%;
   position: absolute;
-  top:145px;
-  left: 120px;
+  top:75.5%;
+  left: 17%;
 }
+
+.circle-degree-second{
+  border-radius: 50%;
+  border: solid 2px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 2%;
+  height: 4%;
+  position: absolute;
+  top:65%;
+  left: 21.5%;
+}
+
+.circle-degree-third{
+  border-radius: 50%;
+  border: solid 2px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 2%;
+  height: 4%;
+  position: absolute;
+  top:55%;
+  left: 25.5%;
+}
+
+.circle-degree-fourth{
+  border-radius: 50%;
+  border: solid 2px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 2%;
+  height: 4%;
+  position: absolute;
+  top:18.5%;
+  left:45.5%;
+}
+
+.circle-degree-fifth{
+  border-radius: 50%;
+  border: solid 2px red;
+  background-color: red;
+  color:white;
+  font-size: 16px;
+  width: 2%;
+  height: 4%;
+  position: absolute;
+  top:11.5%;
+  left: 53.5%;
+}
+
+
 
 .circle-test{
   border-radius: 50%;
@@ -459,35 +595,111 @@ h3 {
 .plus{
   text-align: center;
   line-height: 16px;
+  font-size: 1vw;
   
 }
 
-.circle:hover {
+.sandy {
   border-radius: 50%;
-  border: solid 3px black;
+  border: solid 2px black;
   background-color: black;
-  color:black;
+  color:white;
   font-size: 16px;
-  width: 15px;
-  height: 15px;
-  text-align: center;
+  width: 1%;
+  height: 2%;
   position: absolute;
-  top:145px;
-  left: 120px;
+  top:40%;
+  left: 20%;
 }
 
-.circle-2 {
+.upper-sand {
   border-radius: 50%;
-  border: solid 3px black;
-  background-color: gray;
+  border: solid 2px black;
+  background-color: black;
   color:red;
   font-size: 16px;
-  width: 15px;
-  height: 15px;
+  width: 1%;
+  height: 2%;
   text-align: center;
   position: absolute;
-  top:185px;
-  left: 200px;
+  top:43%;
+  left:34%;
+}
+
+.upper-clay {
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: black;
+  color:red;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  text-align: center;
+  position: absolute;
+  top:50%;
+  left:20%;
+}
+
+
+.intermediate-clay {
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: black;
+  color:red;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  text-align: center;
+  position: absolute;
+  top:58%;
+  left: 20%;
+}
+
+.intermediate-sand {
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: black;
+  color:red;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  text-align: center;
+  position: absolute;
+  top:63%;
+  left: 20%;
+}
+
+.lower-clay {
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: black;
+  color:red;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  text-align: center;
+  position: absolute;
+  top:72%;
+  left: 20%;
+}
+
+.lower-sand {
+  border-radius: 50%;
+  border: solid 2px black;
+  background-color: black;
+  color:red;
+  font-size: 16px;
+  width: 1%;
+  height: 2%;
+  text-align: center;
+  position: absolute;
+  top:82%;
+  left: 20%;
+}
+
+.sandy:hover, .upper-sand:hover, .upper-clay:hover, .intermediate-clay:hover, .intermediate-sand:hover, .lower-clay:hover, .lower-sand:hover {
+  border: solid 2px black;
+  background-color: gray;
 }
 
 @media (max-width:400px){
@@ -502,4 +714,12 @@ h3 {
   position: absolute;
   top:60px;
   left: 120px;
-}  
+}
+}
+
+
+.source-slide{
+  background-color: white;
+  max-width:800px;
+  max-height:400px;
+}

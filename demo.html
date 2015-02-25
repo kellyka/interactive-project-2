@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+
+  
   <meta charset="utf-8">
   <title>Slider project</title>
   
@@ -8,36 +11,43 @@
     
   <link rel="stylesheet" href="responsiveslides.css">
   <link rel="stylesheet" href="demo.css">
-    
+  
   <link rel="stylesheet" type="text/css" href="tooltipster.css" />
-  
-  
-
-    
+        
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="responsiveslides.min.js"></script>
-  
-  
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.7.0.min.js"></script>
+
   <script type="text/javascript" src="jquery.tooltipster.js"></script>
   
-  
-        
+          
   <script>
-    // You can also use "$(window).load(function() {"
     $(function () {
-
-      // Slideshow 2
-      $("#slider2").responsiveSlides({
+      
+      $("#slider4").responsiveSlides({
         auto: false,
-        pager: true,
-        
+        pager: false,
+        nav: true,
         speed: 300,
-        maxwidth: 1000
+        maxwidth: 800,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        },
+       
+      "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
+      "manualControls": "",     // Selector: Declare custom pager navigation
+    
       });
 
+    
     });
+    
   </script>
+  
+  
   
   <script>
         $(document).ready(function() {
@@ -134,23 +144,24 @@
 
 
 <body>
-  <div id="wrapper">
+  
     
     <h1>Torre Pendente di Pisa</h1>
     <br>
 
     <!-- Title slide -->
-    <ul class="rslides" id="slider2">
-      <li><a href="#"><img src="images/pisa-title-slide-01.jpg" alt=""></a></li>
+    <div class="callbacks_container">
+    <ul class="rslides" id="slider4">
+      <li><img src="images/pisa-title-slide-01.jpg" alt=""></li>
     
     <!-- Map of ITALY -->
 
-      <li><a href="#"><img src="images/italy-map-01.jpg" alt=""></a>
+      <li>
         
-        <a href="#" coords="360,300" id="my-tooltip-milan" class="circle-milan" style="position: absolute; width: 32px; height: 32px; left: 344px; top: 284px;"></a>
-        
+        <img src="images/italy-map-01.jpg" alt="">
       
-      <a href="#"><div id="my-tooltip-venice"class="circle-venice"></div></a>
+      <a href="#"><div id="my-tooltip-milan" class="circle-milan"></div></a>
+      <a href="#"><div id="my-tooltip-venice" class="circle-venice"></div></a>
       <a href="#"><div id="my-tooltip" class="circle-pisa"></div></a>
       <a href="#"><div id="my-tooltip-florence" class="circle-florence"></div></a>
       <a href="#"><div id="my-tooltip-rome" class="circle-rome"></div></a>
@@ -161,7 +172,7 @@
           <h5>Citta italiane</h5>
           <p class="left-align">Click the circles to discover some of Italy's major cities.</p>
           <br>
-          <h5>Facts about Italy:</h5>
+          <h5>Facts about Italy</h5>
           <p class="left-align"><strong>Population:</strong> 58,742,000</p>
           <p class="left-align"><strong>Capital:</strong> Rome</p>
           <p class="left-align"><strong>Area:</strong> 301,333 square kilometers</p>
@@ -173,15 +184,29 @@
       
       <!-- PISA MAP --> 
       <li>
-        <img src="images/pisa-map-01.jpg" alt="">
-          <a href="#"><div class="circle-baptistry tooltip" title="The Baptistry"></div></a>
+        <img src="images/pisa-map-without-01.jpg" alt="">
+          <a href="#"><div class="circle-baptistry tooltip" title="Battistero di San Giovanni"></div></a>
           <a href="#"><div class="circle-leaning tooltip" title="The Leaning Tower"></div></a>
+          <a href="#"><div class="circle-cattedrale tooltip" title="Cattedrale di Pisa"></div></a>
+          <a href="#"><div class="circle-piazza tooltip" title="Piazza dei Miracoli"></div></a>
+          <a href="#"><div class="circle-museo tooltip" title="Museo delle sinopie"></div></a>
+          <a href="#"><div class="circle-camposanto tooltip" title="Il Camposanto"></div></a>
+          <a href="#"><div class="circle-fountain tooltip" title="La Fontana dei putti"></div></a>
       
         <div class="caption">
           <h5>Pisa</h5>
           <p class="left-align">Click the circles to discover major monuments in Pisa.</p>
           <br>
-          <img src="images/pisa-photo.jpg" alt="" style=width:90%>
+          <p class="left-align">The Baptistry</p>
+          <p class="left-align">The Leaning Tower</p>
+          <p class="left-align">The Cathedral</p>
+          <p class="left-align">The Square of Miracles</p>
+          <p class="left-align">Museum Sinopie</p>
+          <p class="left-align">The Monumental Cemetery</p>
+          <p class="left-align">The Fountain with Angels</p>
+          
+          <br>
+          
         </div>
         
         
@@ -189,32 +214,40 @@
       
     <li>
       <img src="images/timeline-final-01.jpg" alt="">
-      <a href="#"><div class="circle-timeline-one tooltip" title="1173-1178: One third of the 4th order was completed"><p class="plus">+</p></div></a>
-      <a href="#"><div class="circle-timeline-two tooltip" title="1272-1278: The 7th cornice was built"><p class="plus">+</p></div></a>   
-      <a href="#"><div class="circle-timeline-three tooltip" title="1360-1370: The bell chamber was built"><p class="plus">+</p></div></a>   
+      <a href="#"><div class="circle-timeline-one tooltip" title="1173-1178: One third of the 4th order was completed"></div></a>
+      <a href="#"><div class="circle-timeline-two tooltip" title="1272-1278: The 7th cornice was built"></div></a>   
+      <a href="#"><div class="circle-timeline-three tooltip" title="1360-1370: The bell chamber was built"></div></a>   
     
     </li>
       
      <!-- LEAN --> 
       <li>
         <img src="images/incline-timeline-01.jpg" alt=""></a>
+        <a href="#"><div class="circle-degree-first tooltip" title="0.2 degrees N"></div></a>
+        <a href="#"><div class="circle-degree-second tooltip" title="0.6 degrees S"></div></a>
+        <a href="#"><div class="circle-degree-third tooltip" title="1.6 degrees S"></div></a>
+        <a href="#"><div class="circle-degree-fourth tooltip" title="4.9 degrees S"></div></a>
+        <a href="#"><div class="circle-degree-fifth tooltip" title="5.5 degrees S"></div></a>
+      
       </li>
       
      <!-- UNDERGROUND --> 
       <li>
         <img src="images/underground-pisa-01.jpg" alt="">
         
-          <a href="#"><div class="circle tooltip" title="Sandy and clayey silts"><p class="plus">+</p></div></a>
-        
-        
-          <a href="#"><div class="circle-2 tooltip" title="Upper clay"></div></a>
-        
+          <a href="#"><div class="sandy tooltip" title="Sandy and clayey silts"></div></a>        
+          <a href="#"><div class="upper-sand tooltip" title="Upper sand"></div></a>
+          <a href="#"><div class="upper-clay tooltip" title="Upper clay"></div></a>
+          <a href="#"><div class="intermediate-clay tooltip" title="Intermediate clay"></div></a>
+          <a href="#"><div class="intermediate-sand tooltip" title="Intermediate sand"></div></a>
+          <a href="#"><div class="lower-clay tooltip" title="Lower clay"></div></a>
+          <a href="#"><div class="lower-sand tooltip" title="Lower sand"></div></a>
         
         <div class="caption">
           <h5>Subsoil profile</h5>
           <p class="left-align">Click the circles to discover what the different layers are made of.</p>
           <br>
-          <p class="left-align">The water table in horizon A is 1 to 2 m below the ground. Pumping form the loswer sand (in horizon C) has create downward seepage from horizon A. The average settlement of the Tower is approximately 3 m.</p>
+          <p class="left-align">The water table in horizon A is 1 to 2 m below the ground. Pumping from the lower sand (in horizon C) has create downward seepage from horizon A. The average settlement of the Tower is approximately 3 m.</p>
         
         </div>
       
@@ -229,9 +262,37 @@
 
         
       </li>
+      
+      <li>
+        <img src="images/sources-slide-background-01.png" alt="">
+        <div class="sources">
+        <h3>Sources</h3>
+        <br>
+        <a href="http://travel.nationalgeographic.com/travel/countries/italy-facts/" target="_blank">National Geographic</a>
+        <br>
+        <a href="http://www.italyguides.it/us/pisa/interactive_map_of_pisa/map_of_pisa.php#toppage" target="_blank">Italy Guides</a>
+        <br>
+        <a href="https://www.jstage.jst.go.jp/article/sandf1995/43/5/43_5_63/_pdf" target="_blank">"The Stabilisation of the Leaning Tower of Pisa"</a>
+        <br>
+        <a href="http://www.wondermondo.com/Countries/E/IT/Lombardy/MilanCathedral.htm" target="_blank">Milan Cathedral photo</a>
+        <br>
+        <a href="http://blog.luxuryretreats.com/2013/02/just-launched-new-villas-in-sicily/" target="_blank">Sicily photo</a>
+        <br>
+        <a href="https://www.cruisingexcursions.com/search-port.php?port=164" target="_blank">Naples photo</a>
+        <br>
+        <a href="http://www.towerofpisa.info/Tower-of-Pisa-facts.html" target="_blank">Leaning Tower facts</a>
+        <br>
+        <a href="http://www.sciencekids.co.nz/sciencefacts/engineering/leaningtowerofpisa.html " target="_blank">More Leaning Tower facts</a>
+
+       
+        </div>
+      </li>
     </ul>
+  </div>
+    
+      
 
     
-  </div>
+  
 </body>
 </html>
