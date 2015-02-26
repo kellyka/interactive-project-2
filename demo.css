@@ -39,6 +39,7 @@ p,h3,h4,pre {
  
  
   }
+  
 
 h5{
   font: 1.5vw "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -165,13 +166,18 @@ h3 {
   left: 0px;
   width: 100%;
   height: 100%;
-  font-size: 14px;
+  font-size: 1.5vw;
   text-shadow: none;
   color: #fff;
   background: #000;
   background: rgba(0,0,0, .8);
   padding: 20px;
   line-height: 2.5vw;
+}
+
+li .sources h3{
+  font-size: 2.5vw;
+  font-weight: bold;
 }
 
 .callbacks_container {
@@ -228,7 +234,7 @@ h3 {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   top: 52%;
   left: 0;
-  opacity: 0.7;
+  opacity: 0.1;
   z-index: 3;
   text-indent: -9999px;
   overflow: hidden;
@@ -241,7 +247,7 @@ h3 {
   }
 
 .callbacks_nav:active {
-  opacity: 1.0;
+  opacity: 0.7;
   }
 
 .callbacks_nav.next {
@@ -777,4 +783,8 @@ h3 {
   background-color: white;
   max-width:800px;
   max-height:400px;
+  line-height: 2vw;
+  font-size: 1.5vw;
 }
+
+.sources
